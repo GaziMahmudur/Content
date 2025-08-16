@@ -1,6 +1,6 @@
 const PASSWORD = "HexaForce"; // Login with button or Enter key
 function checkPassword(event) {
-  event.preventDefault();
+  if (event) event.preventDefault();
   let input = document.getElementById("password")?.value;
   if (input === PASSWORD) {
     window.location.href = "index.html";
@@ -11,7 +11,7 @@ function checkPassword(event) {
 
 // Enter key submits password automatically
 document.getElementById("password")?.addEventListener("keyup", function (e) {
-  if (e.key === "Enter") checkPassword();
+  if (e.key === "Enter") checkPassword(e);
 });
 
 // ── Popup for download (Google Drive) ────────────────────────────────
