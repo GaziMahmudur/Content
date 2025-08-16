@@ -1,53 +1,43 @@
-const PASSWORD = "HexaForce";
-
-// Login with button or Enter key
-function checkPassword(event) {
-  event.preventDefault();
-  let input = document.getElementById("password")?.value;
-  if (input === PASSWORD) {
-    window.location.href = "index.html";
-  } else {
-    document.getElementById("error-msg").textContent = "Wrong password!";
-  }
-}
-
-// Enter key submits password automatically
-document.getElementById("password")?.addEventListener("keyup", function (e) {
-  if (e.key === "Enter") checkPassword();
-});
-
-// Popup for download
+// ── Popup for download (Google Drive) ────────────────────────────────
 const popup = document.getElementById("popup");
 const popupText = document.getElementById("popup-text");
 const popupYes = document.getElementById("popup-yes");
+const popupCancel = document.getElementById("popup-cancel");
 
-function confirmDownload(name, link) {
-  popupText.textContent = `Do you want to download Bachelor Point season 5, ${name} ?`;
-  popupYes.onclick = function () {
-    window.location.href = link;
-  }
+// কার্ডে ক্লিক করলে টেম্পোরারি লিঙ্ক রাখব
+let pendingDownload = { name: "", url: "" };
+
+function confirmDownload(name, url) {
+  pendingDownload = { name, url };
+  popupText.textContent = `Open Google Drive for ${name}?`;
   popup.style.display = "flex";
 }
 
+// Yes → নতুন ট্যাবে Drive লিঙ্ক ওপেন + পপআপ বন্ধ
+popupYes.addEventListener("click", () => {
+  const { url } = pendingDownload;
+  popup.style.display = "none";
+  if (url) {
+    window.open(url, "_blank");
+  }
+});
+
+// Cancel → পপআপ বন্ধ
 function closePopup() {
   popup.style.display = "none";
 }
 
-document.getElementById("popup-yes").addEventListener("click", function () {
-  // প্রথমে popup hide
-  document.getElementById("popup").style.display = "none";
+popupCancel.addEventListener("click", closePopup);
 
-  // কিছু মিলিসেকেন্ড delay দিয়ে download start
-  setTimeout(() => {
-    window.location.href = link;
-  }, 100); // 0.1 second delay
+// Esc বা backdrop এ ক্লিক করলে পপআপ বন্ধ
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closePopup();
+});
+popup.addEventListener("click", (e) => {
+  if (e.target === popup) closePopup();
 });
 
-document.getElementById("popup-cancel").addEventListener("click", function () {
-  document.getElementById("popup").style.display = "none";
-});
-
-
+// Fade-in animation on scroll
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(".fade-in-up");
 
@@ -56,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
       } else {
-        // retrigger purpose: remove class when not in view
         entry.target.classList.remove("show");
       }
     });
@@ -64,4 +53,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   elements.forEach(el => observer.observe(el));
 });
-
