@@ -1,3 +1,19 @@
+const PASSWORD = "HexaForce"; // Login with button or Enter key
+function checkPassword(event) {
+  event.preventDefault();
+  let input = document.getElementById("password")?.value;
+  if (input === PASSWORD) {
+    window.location.href = "index.html";
+  } else {
+    document.getElementById("error-msg").textContent = "Wrong password!";
+  }
+}
+
+// Enter key submits password automatically
+document.getElementById("password")?.addEventListener("keyup", function (e) {
+  if (e.key === "Enter") checkPassword();
+});
+
 // ── Popup for download (Google Drive) ────────────────────────────────
 const popup = document.getElementById("popup");
 const popupText = document.getElementById("popup-text");
