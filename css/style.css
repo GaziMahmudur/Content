@@ -1,0 +1,357 @@
+/* Uiverse.io Login Box Styles by Priyanshu02020 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: auto;
+  min-height: 100vh;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #1B1B1B, #003153);
+}
+
+.login-container {
+  --form-width: 315px;
+  --aspect-ratio: 1.33;
+  --input-color: #3a3a3a;
+  --button-color: #373737;
+  --footer-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--login-box-color);
+  border-radius: 24px;
+  width: calc(var(--form-width) + 1px);
+  height: calc(var(--form-width) * var(--aspect-ratio) + 1px);
+  z-index: 1;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 8px 16px rgba(0, 0, 0, 0.2),
+    0 0 8px rgba(255, 255, 255, 0.1),
+    0 0 16px rgba(255, 255, 255, 0.08);
+}
+
+.login-box {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 28px;
+  width: var(--form-width);
+  height: calc(var(--form-width) * var(--aspect-ratio));
+  position: absolute;
+  z-index: 10;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow:
+    inset 0 40px 60px -8px rgba(7, 0, 0, 0.12),
+    inset 4px 0 12px -6px rgba(0, 0, 0, 0.12),
+    inset 0 0 12px -4px rgba(0, 0, 0, 0.12);
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logo {
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(0, 0, 0, 0.2));
+  box-shadow:
+    8px 8px 16px rgba(0, 0, 0, 0.2),
+    -8px -8px 16px rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  width: 50%;
+  height: 20%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 2.5px solid #fff;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  border: 2.5px solid #fff;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 6px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  outline: none;
+  font-size: 14px;
+}
+
+.input:focus {
+  border: 1px solid #ffffff;
+}
+
+.button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  gap: 10px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  /* Add this line */
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+  box-shadow:
+    inset 0px 3px 6px -4px rgba(255, 255, 255, 0.6),
+    inset 0px -3px 6px -2px rgba(0, 0, 0, 0.8);
+}
+
+.sign-in {
+  margin-top: 5px;
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow:
+    inset 0px 3px 6px rgba(255, 255, 255, 0.6),
+    inset 0px -3px 6px rgba(0, 0, 0, 0.8),
+    0px 0px 8px rgba(255, 255, 255, 0.05);
+}
+
+.icon {
+  height: 16px;
+}
+
+/* Gallery Cards */
+.gallery-container {
+  margin: 15px 12px;
+  margin-bottom: 75px;
+  min-width: 259px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  animation: fadeIn 1s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.card h3 {
+  padding: 10px;
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+/* Card Animation retrigger */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+}
+
+.fade-in-up.show {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: visible 0.5s ease forwards;
+}
+
+@keyframes visible {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.popup-content {
+  background: rgb(0, 0, 0);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+}
+
+.popup-content button {
+  margin: 10px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.popup-btn-yes {
+  background: #00c853b0;
+  color: #fff;
+}
+
+.popup-btn-yes:hover {
+  background: #00b32a;
+}
+
+.popup-btn-cancel {
+  background: #444;
+  color: #fff;
+}
+
+.popup-btn-cancel:hover {
+  background: #222;
+}
+
+#popup-text {
+  color: #ffffff;
+  margin-top: 10px;
+  font: bold 18px;
+}
+
+#error-msg {
+  color: #ff4444;
+  margin-top: 10px;
+}
+
+@media (min-width: 320px) {
+  .card {
+    width: 150px;
+    height: 84px;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 200px;
+    height: 110px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .gallery-container {
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-container {
+    margin-bottom: 60px;
+  }
+
+  .card {
+    width: 300px;
+    height: 170px;
+    aspect-ratio: 20 / 11;
+  }
+}
+
+@media (min-width: 1440px) {
+  .gallery-container {
+    max-width: 1200px;
+    margin-inline: auto;
+    align-items: stretch;
+  }
+
+  .card {
+    width: 400px;
+    height: 225px;
+    aspect-ratio: 16 / 9;
+  }
+}

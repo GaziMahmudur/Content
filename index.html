@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Gallery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="gallery-container">
+    <h1>Bachelor Point</h1>
+    <div class="gallery" id="gallery">
+      <!-- Example Card -->
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 1', './Bachelor_Point/Bachelor.Point.S05E01.mkv')">
+        <h3>Episode 1</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 2', './Bachelor_Point/Bachelor.Point.S05E02.mkv')">
+        <h3>Episode 2</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 3', './Bachelor_Point/Bachelor.Point.S05E03.mkv')">
+        <h3>Episode 3</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 4', './Bachelor_Point/Bachelor.Point.S05E04.mkv')">
+        <h3>Episode 4</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 5', './Bachelor_Point/Bachelor.Point.S05E05.mkv')">
+        <h3>Episode 5</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 6', './Bachelor_Point/Bachelor.Point.S05E06.mkv')">
+        <h3>Episode 6</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 7', './Bachelor_Point/Bachelor.Point.S05E07.mkv')">
+        <h3>Episode 7</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 8', './Bachelor_Point/Bachelor.Point.S05E08.mkv')">
+        <h3>Episode 8</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 9-16', './Bachelor_Point/EmwBD1.Shop-. - Bachelor Point [S05E09-16].mkv')">
+        <h3>Episode 9-16</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 17', './Bachelor_Point/Bachelor.Point.S05.E17.mkv')">
+        <h3>Episode 17</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 18', './Bachelor_Point/Bachelor.Point.S05.E18.mkv')">
+        <h3>Episode 18</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 19', './Bachelor_Point/Bachelor.Point.S05.E19.mkv')">
+        <h3>Episode 19</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 20', './Bachelor_Point/Bachelor.Point.S05.E20.mkv')">
+        <h3>Episode 20</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 21', './Bachelor_Point/Bachelor.Point.S05.E21.mkv')">
+        <h3>Episode 21</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 22', './Bachelor_Point/Bachelor.Point.S05.E22.mkv')">
+        <h3>Episode 22</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 23', './Bachelor_Point/Bachelor.Point.S05.E23.mkv')">
+        <h3>Episode 23</h3>
+      </div>
+      <div class="card fade-in-up" onclick="confirmDownload('Episode 24', './Bachelor_Point/Bachelor.Point.S05.E24.mkv')">
+        <h3>Episode 24</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div id="popup" class="popup" style="display:none">
+    <div class="popup-content">
+      <p id="popup-text"></p>
+      <button id="popup-yes" class="popup-btn-yes">Yes, Download</button>
+      <button id="popup-cancel" class="popup-btn-cancel" onclick="closePopup()">Cancel</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
