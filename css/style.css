@@ -305,6 +305,7 @@ body {
 }
 
 .card {
+  box-shadow: inset 8px 8px 16px rgba(0, 0, 0, 0.7), inset -8px -8px 16px rgba(255, 255, 255, 0.1);
   border: 1px solid #3e4e5b;
   width: 200px;
   border-radius: 20px;
@@ -322,90 +323,91 @@ body {
 /* Staggered serial animation for gallery cards (up to 20 items)
    Uses small incremental delays so cards appear one after another. */
 .gallery .card:nth-child(1) {
-  animation-delay: 0.06s;
+  animation-delay: 0.07s;
 }
 
 .gallery .card:nth-child(2) {
-  animation-delay: 0.14s;
+  animation-delay: 0.15s;
 }
 
 .gallery .card:nth-child(3) {
-  animation-delay: 0.22s;
+  animation-delay: 0.23s;
 }
 
 .gallery .card:nth-child(4) {
-  animation-delay: 0.30s;
+  animation-delay: 0.31s;
 }
 
 .gallery .card:nth-child(5) {
-  animation-delay: 0.38s;
+  animation-delay: 0.39s;
 }
 
 .gallery .card:nth-child(6) {
-  animation-delay: 0.46s;
+  animation-delay: 0.47s;
 }
 
 .gallery .card:nth-child(7) {
-  animation-delay: 0.54s;
+  animation-delay: 0.55s;
 }
 
 .gallery .card:nth-child(8) {
-  animation-delay: 0.62s;
+  animation-delay: 0.63s;
 }
 
 .gallery .card:nth-child(9) {
-  animation-delay: 0.70s;
+  animation-delay: 0.71s;
 }
 
 .gallery .card:nth-child(10) {
-  animation-delay: 0.78s;
+  animation-delay: 0.79s;
 }
 
 .gallery .card:nth-child(11) {
-  animation-delay: 0.86s;
+  animation-delay: 0.87s;
 }
 
 .gallery .card:nth-child(12) {
-  animation-delay: 0.94s;
+  animation-delay: 0.95s;
 }
 
 .gallery .card:nth-child(13) {
-  animation-delay: 1.02s;
+  animation-delay: 1.03s;
 }
 
 .gallery .card:nth-child(14) {
-  animation-delay: 1.10s;
+  animation-delay: 1.11s;
 }
 
 .gallery .card:nth-child(15) {
-  animation-delay: 1.18s;
+  animation-delay: 1.19s;
 }
 
 .gallery .card:nth-child(16) {
-  animation-delay: 1.26s;
+  animation-delay: 1.27s;
 }
 
 .gallery .card:nth-child(17) {
-  animation-delay: 1.34s;
+  animation-delay: 1.35s;
 }
 
 .gallery .card:nth-child(18) {
-  animation-delay: 1.42s;
+  animation-delay: 1.43s;
 }
 
 .gallery .card:nth-child(19) {
-  animation-delay: 1.50s;
+  animation-delay: 1.51s;
 }
 
 .gallery .card:nth-child(20) {
-  animation-delay: 1.58s;
+  animation-delay: 1.59s;
 }
 
 
 .bp5 {
   width: 80px;
   height: 80px;
-  background: #0866ff;
+  box-shadow: inset 8px 8px 16px rgba(0, 0, 0, 0.7), inset -8px -8px 16px rgba(255, 255, 255, 0.1);
+
   color: white;
   border-radius: 50%;
   display: flex;
