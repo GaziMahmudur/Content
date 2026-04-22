@@ -27,7 +27,7 @@ function closePopup() {
   popup.classList.remove("active");
 }
 
-if(popupCancel) popupCancel.addEventListener("click", closePopup);
+if (popupCancel) popupCancel.addEventListener("click", closePopup);
 
 // Esc বা backdrop এ ক্লিক করলে পপআপ বন্ধ
 document.addEventListener("keydown", (e) => {
@@ -37,19 +37,11 @@ popup.addEventListener("click", (e) => {
   if (e.target === popup) closePopup();
 });
 
-// Fade-in animation on scroll
-document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll(".episode-card");
+// IntersectionObserver for scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle('animate-active', entry.isIntersecting);
+  });
+}, { threshold: 0.15 });
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        // Optional: Stop observing once faded in for better performance
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  elements.forEach(el => observer.observe(el));
-});
+document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));

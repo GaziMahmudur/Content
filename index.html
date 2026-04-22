@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bachelor Point | Premium UI</title>
-    <!-- Fonts requested by the CSS -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,6 +20,15 @@
 
     <!-- Header -->
     <header class="site-header">
+        <!-- SVG Gradient Definition -->
+        <svg width="0" height="0" style="position:absolute">
+            <defs>
+                <linearGradient id="theme-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#1d8cf8;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#a21df8;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+        </svg>
         <div class="header-inner">
             <span class="brand-tag">BD SERIES</span>
             <h1 class="brand-title">Bachelor <em>Point</em></h1>
@@ -36,251 +45,247 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="section-label">— Select an episode to watch —</div>
-        
-        <div class="season-divider">
-            <span>SEASON 5</span>
-        </div>
 
         <div class="episodes-grid" id="gallery">
 
-            <div class="episode-card" onclick="confirmDownload('Episode 1', 'https://drive.google.com/file/d/1jHNWHTs6gXk1Ur3Cggrxim7hNkeQfy4K/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">01</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 1</div>
+            <!-- Card 1 -->
+            <div class="episode-card animate-on-scroll" style="--i:1" onclick="confirmDownload('Episode 1', 'https://drive.google.com/file/d/1jHNWHTs6gXk1Ur3Cggrxim7hNkeQfy4K/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 1</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 2', 'https://drive.google.com/file/d/1HKeZuL9feDFBipv3_vknuGYlQjyX7Dip/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">02</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 2</div>
+            <!-- Card 2 -->
+            <div class="episode-card animate-on-scroll" style="--i:2" onclick="confirmDownload('Episode 2', 'https://drive.google.com/file/d/1HKeZuL9feDFBipv3_vknuGYlQjyX7Dip/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 2</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 3', 'https://drive.google.com/file/d/1ij54SuU1gL2thtNE4FxaOyClU7Q19Ol8/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">03</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 3</div>
+            <!-- Card 3 -->
+            <div class="episode-card animate-on-scroll" style="--i:3" onclick="confirmDownload('Episode 3', 'https://drive.google.com/file/d/1ij54SuU1gL2thtNE4FxaOyClU7Q19Ol8/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 3</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 4', 'https://drive.google.com/file/d/1NQdmQZxdGwgulca_3B50GpAE5FedGQMd/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">04</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 4</div>
+            <!-- Card 4 -->
+            <div class="episode-card animate-on-scroll" style="--i:4" onclick="confirmDownload('Episode 4', 'https://drive.google.com/file/d/1NQdmQZxdGwgulca_3B50GpAE5FedGQMd/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 4</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 5', 'https://drive.google.com/file/d/1ztr-DBQl0AYcQtyQD5IvUwbaEaY3-5Es/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">05</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 5</div>
+            <!-- Card 5 -->
+            <div class="episode-card animate-on-scroll" style="--i:5" onclick="confirmDownload('Episode 5', 'https://drive.google.com/file/d/1ztr-DBQl0AYcQtyQD5IvUwbaEaY3-5Es/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 5</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 6', 'https://drive.google.com/file/d/1RLfOdkyzdUIf1Q7g3k30jc-3RY_KIbak/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">06</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 6</div>
+            <!-- Card 6 -->
+            <div class="episode-card animate-on-scroll" style="--i:6" onclick="confirmDownload('Episode 6', 'https://drive.google.com/file/d/1RLfOdkyzdUIf1Q7g3k30jc-3RY_KIbak/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 6</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 7', 'https://drive.google.com/file/d/15VP2pY_0jW9dbt9bYp0KMlRCPxa6nFIz/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">07</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 7</div>
+            <!-- Card 7 -->
+            <div class="episode-card animate-on-scroll" style="--i:7" onclick="confirmDownload('Episode 7', 'https://drive.google.com/file/d/15VP2pY_0jW9dbt9bYp0KMlRCPxa6nFIz/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 7</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 8', 'https://drive.google.com/file/d/1-5bZ0czsFInr5lYZApDfzR7h72zMUJf1/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">08</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 8</div>
+            <!-- Card 8 -->
+            <div class="episode-card animate-on-scroll" style="--i:8" onclick="confirmDownload('Episode 8', 'https://drive.google.com/file/d/1-5bZ0czsFInr5lYZApDfzR7h72zMUJf1/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 8</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 9-16', 'https://drive.google.com/file/d/1rA2wMmj63LG8hm45NT-SdUiUSp98mYln/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">09</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE BUNDLE</div>
-                    <div class="card-title">Episode 9-16</div>
+            <!-- Card 9 -->
+            <div class="episode-card animate-on-scroll" style="--i:9" onclick="confirmDownload('Episode 9-16', 'https://drive.google.com/file/d/1rA2wMmj63LG8hm45NT-SdUiUSp98mYln/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 9-16</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 17', 'https://drive.google.com/file/d/16FRRKLL9RFNzVToXU2RMQ_H_7PEAm6jl/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">10</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 17</div>
+            <!-- Card 10 -->
+            <div class="episode-card animate-on-scroll" style="--i:10" onclick="confirmDownload('Episode 17', 'https://drive.google.com/file/d/16FRRKLL9RFNzVToXU2RMQ_H_7PEAm6jl/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 17</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 18', 'https://drive.google.com/file/d/14ax13BXdvkeTjBG9zVVsJUfn3nAlOAFS/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">11</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 18</div>
+            <!-- Card 11 -->
+            <div class="episode-card animate-on-scroll" style="--i:11" onclick="confirmDownload('Episode 18', 'https://drive.google.com/file/d/14ax13BXdvkeTjBG9zVVsJUfn3nAlOAFS/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 18</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 19', 'https://drive.google.com/file/d/1MIH7TNdtVyd3vc2poCgsp3Etr8BuDNrm/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">12</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 19</div>
+            <!-- Card 12 -->
+            <div class="episode-card animate-on-scroll" style="--i:12" onclick="confirmDownload('Episode 19', 'https://drive.google.com/file/d/1MIH7TNdtVyd3vc2poCgsp3Etr8BuDNrm/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 19</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 20', 'https://drive.google.com/file/d/1HmqaoxIMqKUXpEclnp2SfOLS11zcu297/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">13</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 20</div>
+            <!-- Card 13 -->
+            <div class="episode-card animate-on-scroll" style="--i:13" onclick="confirmDownload('Episode 20', 'https://drive.google.com/file/d/1HmqaoxIMqKUXpEclnp2SfOLS11zcu297/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 20</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 21', 'https://drive.google.com/file/d/12FkAg13tmCit2RgzVNO_hCZsYpM1ed29/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">14</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 21</div>
+            <!-- Card 14 -->
+            <div class="episode-card animate-on-scroll" style="--i:14" onclick="confirmDownload('Episode 21', 'https://drive.google.com/file/d/12FkAg13tmCit2RgzVNO_hCZsYpM1ed29/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 21</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 22', 'https://drive.google.com/file/d/1i2TrcR6IaMXAltXKGgvlt4FFm2O530_t/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">15</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 22</div>
+            <!-- Card 15 -->
+            <div class="episode-card animate-on-scroll" style="--i:15" onclick="confirmDownload('Episode 22', 'https://drive.google.com/file/d/1i2TrcR6IaMXAltXKGgvlt4FFm2O530_t/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 22</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 23', 'https://drive.google.com/file/d/1R5O2i9UqnbWpve-owRa3kn94FnTanG7A/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">16</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 23</div>
+            <!-- Card 16 -->
+            <div class="episode-card animate-on-scroll" style="--i:16" onclick="confirmDownload('Episode 23', 'https://drive.google.com/file/d/1R5O2i9UqnbWpve-owRa3kn94FnTanG7A/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 23</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 24', 'https://drive.google.com/file/d/13S1v98cOQHVdXMjo79w-4wizjdNzSAfy/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">17</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE</div>
-                    <div class="card-title">Episode 24</div>
+            <!-- Card 17 -->
+            <div class="episode-card animate-on-scroll" style="--i:17" onclick="confirmDownload('Episode 24', 'https://drive.google.com/file/d/13S1v98cOQHVdXMjo79w-4wizjdNzSAfy/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 24</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 25-32', 'https://drive.google.com/file/d/1tY3bcCFfh0kWLbifySbOu_uqhD-usx_0/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">18</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE BUNDLE</div>
-                    <div class="card-title">Episode 25-32</div>
+            <!-- Card 18 -->
+            <div class="episode-card animate-on-scroll" style="--i:18" onclick="confirmDownload('Episode 25-32', 'https://drive.google.com/file/d/1tY3bcCFfh0kWLbifySbOu_uqhD-usx_0/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 25-32</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 33-40', 'https://drive.google.com/file/d/1obV3AcODAKGdPw1Yl3ukbvlkxwSd6OVC/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">19</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE BUNDLE</div>
-                    <div class="card-title">Episode 33-40</div>
+            <!-- Card 19 -->
+            <div class="episode-card animate-on-scroll" style="--i:19" onclick="confirmDownload('Episode 33-40', 'https://drive.google.com/file/d/1obV3AcODAKGdPw1Yl3ukbvlkxwSd6OVC/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 33-40</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 41-48', 'https://drive.google.com/file/d/18xXN3sswsRW2zJPGxemJVHy6lelqE_ID/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">20</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE BUNDLE</div>
-                    <div class="card-title">Episode 41-48</div>
+            <!-- Card 20 -->
+            <div class="episode-card animate-on-scroll" style="--i:20" onclick="confirmDownload('Episode 41-48', 'https://drive.google.com/file/d/18xXN3sswsRW2zJPGxemJVHy6lelqE_ID/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 41-48</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 49-56', 'https://drive.google.com/file/d/11v3LhaRkCA6j88CYwIpc0ic6TUCTbYe5/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">21</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE BUNDLE</div>
-                    <div class="card-title">Episode 49-56</div>
+            <!-- Card 21 -->
+            <div class="episode-card animate-on-scroll" style="--i:21" onclick="confirmDownload('Episode 49-56', 'https://drive.google.com/file/d/11v3LhaRkCA6j88CYwIpc0ic6TUCTbYe5/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 49-56</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 57-64', 'https://drive.google.com/file/d/1dEMW87m6yrAu2vCJ9lqJcvMQv1Fs091X/view?usp=sharing')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">22</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE BUNDLE</div>
-                    <div class="card-title">Episode 57-64</div>
+            <!-- Card 22 -->
+            <div class="episode-card animate-on-scroll" style="--i:22" onclick="confirmDownload('Episode 57-64', 'https://drive.google.com/file/d/1dEMW87m6yrAu2vCJ9lqJcvMQv1Fs091X/view?usp=sharing')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 57-64</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 65-72', 'https://drive.google.com/file/d/1aP9XpUrKEJh1ETgH7_Hm450Wx5Fmoo4F/view?usp=sharing')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">23</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE BUNDLE</div>
-                    <div class="card-title">Episode 65-72</div>
+            <!-- Card 23 -->
+            <div class="episode-card animate-on-scroll" style="--i:23" onclick="confirmDownload('Episode 65-72', 'https://drive.google.com/file/d/1aP9XpUrKEJh1ETgH7_Hm450Wx5Fmoo4F/view?usp=sharing')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 65-72</h3>
+                </div>
             </div>
 
-            <div class="episode-card" onclick="confirmDownload('Episode 73-80', 'https://drive.google.com/file/d/1MShTXCu9kEvV1gHLLSYQLRp7xLnEbdGg/view?usp=drive_link')">
-                <div class="card-glow"></div><div class="card-shine"></div>
-                <div class="card-number">24</div>
-                <div class="card-body">
-                    <div class="card-label">EPISODE BUNDLE</div>
-                    <div class="card-title">Episode 73-80</div>
+            <!-- Card 24 -->
+            <div class="episode-card animate-on-scroll" style="--i:24" onclick="confirmDownload('Episode 73-80', 'https://drive.google.com/file/d/1MShTXCu9kEvV1gHLLSYQLRp7xLnEbdGg/view?usp=drive_link')">
+                <div class="episode-icon animate-on-scroll">
+                    <svg viewBox="0 0 24 24" fill="url(#theme-gradient)" width="26" height="24"><path d="M8 5v14l11-7z"/></svg>
                 </div>
-                <div class="card-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="episode-content-box animate-on-scroll">
+                    <h3 class="animate-on-scroll">Episode 73-80</h3>
+                </div>
             </div>
 
         </div>
