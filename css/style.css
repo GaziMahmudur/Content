@@ -665,3 +665,112 @@ body {
     transform: translateY(0);
   }
 }
+
+/* =============================================
+   MOBILE OPTIMIZATION (< 600px)
+============================================= */
+@media (max-width: 600px) {
+  :root {
+    --radius: 12px;
+  }
+
+  .site-header {
+    padding: 2.5rem 1.25rem 2rem;
+  }
+
+  .brand-logo {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 0.75rem;
+  }
+
+  .brand-title {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+    margin-bottom: 1.2rem;
+  }
+
+  .brand-sub {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .header-meta {
+    margin-top: 1.5rem;
+  }
+
+  .main-content {
+    padding: 0 1rem 4rem;
+  }
+
+  .section-label {
+    margin-bottom: 1.5rem;
+    font-size: 0.65rem;
+  }
+
+  .episodes-grid {
+    gap: 12px;
+    grid-template-columns: 1fr;
+  }
+
+  .episode-card {
+    padding: 16px;
+  }
+
+  .episode-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 1rem;
+  }
+
+  .episode-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .episode-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .modal-box {
+    padding: 2rem 1.5rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .modal-title {
+    font-size: 1.4rem;
+  }
+
+  .site-footer {
+    padding: 2.5rem 1rem;
+    margin-top: 2rem;
+  }
+
+  .footer-content {
+    gap: 1.5rem;
+  }
+
+  .footer-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-icon-btn {
+    width: 38px;
+    height: 38px;
+  }
+  
+  /* Disable hover expansion on mobile for better touch experience */
+  .social-icon-btn:hover {
+    width: 38px;
+    transform: scale(1.05);
+  }
+  
+  .social-label {
+    display: none;
+  }
+
+  /* Scale down ambient orbs for mobile */
+  .orb-1 { width: 250px; height: 250px; }
+  .orb-2 { width: 300px; height: 300px; }
+  .orb-3 { width: 200px; height: 200px; }
+}
